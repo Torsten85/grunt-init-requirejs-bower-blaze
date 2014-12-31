@@ -1,0 +1,19 @@
+{
+  "name": "{%= name %}",
+  "version": "{%= version %}",
+  "authors": [
+    "{%= author_name %}"
+  ],
+  "license": "{%= licenses.join(',') %}",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "app/scripts/lib/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.15"{% if(blaze) { %},
+    "spacebars": "Torsten85/spacebars"{% } %}
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "app/scripts/app/bootstrap_default.js": "{%= blaze ? 'false' : 'app/scripts/app/bootstrap.js' %}",
+  "app/scripts/app/template.hbs": "{%= blaze ? 'app/scripts/app/template.hbs' : 'false' %}",
+  "app/scripts/app/bootstrap_blaze.js": "{%= blaze ? 'app/scripts/app/bootstrap.js' : 'false' %}"
+}
