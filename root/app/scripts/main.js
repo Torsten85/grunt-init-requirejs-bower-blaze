@@ -4,12 +4,13 @@ requirejs.config({
   paths: {{% if(blaze) { %}
     jquery: '../lib/jquery/dist/jquery',
     underscore: '../lib/underscore/underscore',
-    blaze: '../lib/blaze/blaze'
+    blaze: '../lib/blaze/blaze',
+    lib: '../lib'
   {% } %}},
 
   map: {{% if (blaze) { %}
     '*': {
-      spacebars: '../lib/spacebars/spacebars'
+      spacebars: 'lib/spacebars/spacebars'
     }
   {% } %}},
 
