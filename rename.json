@@ -1,5 +1,9 @@
 {
   "app/scripts/app/bootstrap_default.js": "{%= blaze ? 'false' : 'app/scripts/app/bootstrap.js' %}",
-  "app/scripts/app/template.hbs": "{%= blaze ? 'app/scripts/app/template.hbs' : 'false' %}",
-  "app/scripts/app/bootstrap_blaze.js": "{%= blaze ? 'app/scripts/app/bootstrap.js' : 'false' %}"
+  "app/scripts/app/template.hbs": "{%= blaze && !iron_router ? 'app/scripts/app/template.hbs' : 'false' %}",
+  "app/scripts/app/bootstrap_blaze.js": "{%= blaze && !iron_router ? 'app/scripts/app/bootstrap.js' : 'false' %}",
+  "app/scripts/app/bootstrap_iron_router.js": "{%= blaze && iron_router ? 'app/scripts/app/bootstrap.js' : 'false' %}",
+  "app/scripts/app/layout.hbs": "{%= blaze && iron_router ? 'app/scripts/app/layout.hbs' : 'false' %}",
+  "app/scripts/app/home.hbs": "{%= blaze && iron_router ? 'app/scripts/app/home.hbs' : 'false' %}",
+  "app/scripts/app/sub.hbs": "{%= blaze && iron_router ? 'app/scripts/app/sub.hbs' : 'false' %}"
 }

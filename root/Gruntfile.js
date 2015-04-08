@@ -32,10 +32,7 @@ module.exports = function (grunt) {
           hostname: '0.0.0.0',
           keepalive: true,
           base: 'app',
-          livereload: true,
-          open: {
-            appName: 'Google Chrome'
-          }
+          livereload: true
         }
       }
     },

@@ -5,7 +5,8 @@ requirejs.config({
     jquery: '../lib/jquery/dist/jquery',
     underscore: '../lib/underscore/underscore',
     blaze: '../lib/blaze/blaze',
-    lib: '../lib'
+    lib: '../lib'{% if(iron_router) { %},
+    iron_router: '../lib/iron_router/iron_router'{% } %}
   {% } %}},
 
   map: {{% if (blaze) { %}

@@ -21,11 +21,17 @@ exports.template = function (grunt, init, done) {
       name: 'blaze',
       message: 'Include Blaze? (Awesome templating engine)',
       default: 'Y/n'
+    },
+    {
+      name: 'iron_router',
+      message: 'Include Iron:Router? (Awesome routing for blaze)',
+      default: 'y/N'
     }
 
   ], function (err, props) {
 
     props.blaze = /y/i.test(props.blaze);
+    props.iron_router = props.iron_router === 'y/N' ? false : /y/i.test(props.iron_router);
 
     var files = init.filesToCopy(props);
     init.copyAndProcess(files, props);
