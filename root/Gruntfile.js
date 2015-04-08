@@ -32,7 +32,15 @@ module.exports = function (grunt) {
           hostname: '0.0.0.0',
           keepalive: true,
           base: 'app',
-          livereload: true
+          livereload: true{% if(iron_router) { %},
+          middleware: function (connect, options, middlewares) {
+            var serveStatic = middlewares[0];
+            var redirectToIndex = function (req, res, next) {
+              req.url = '/index.html';
+              return serveStatic(req, res, next);
+            };
+            return [serveStatic, redirectToIndex];
+          }{% } %}
         }
       }
     },

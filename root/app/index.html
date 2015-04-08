@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-  <script src="scripts/lib/requirejs/require.js" data-main="scripts/main.js"></script>
+  <link rel="stylesheet" type="text/css" href="{% if(iron_router) { %}/{% } %}styles/style.css">
+  <script src="{% if(iron_router) { %}/{% } %}scripts/lib/requirejs/require.js" data-main="{% if(iron_router) { %}/{% } %}scripts/main.js"></script>
 </head>
 <body>
 </body>

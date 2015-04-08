@@ -1,5 +1,5 @@
 requirejs.config({
-  baseUrl: 'scripts/app',
+  baseUrl: '{% if(iron_router) { %}/{% } %}scripts/app',
 
   paths: {{% if(blaze) { %}
     jquery: '../lib/jquery/dist/jquery',

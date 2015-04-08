@@ -31,7 +31,7 @@ exports.template = function (grunt, init, done) {
   ], function (err, props) {
 
     props.blaze = /y/i.test(props.blaze);
-    props.iron_router = props.iron_router === 'y/N' ? false : /y/i.test(props.iron_router);
+    props.iron_router = props.blaze && (props.iron_router === 'y/N' ? false : /y/i.test(props.iron_router));
 
     var files = init.filesToCopy(props);
     init.copyAndProcess(files, props);
