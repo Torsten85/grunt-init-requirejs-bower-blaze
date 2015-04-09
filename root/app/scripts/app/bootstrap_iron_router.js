@@ -6,9 +6,8 @@ define(function (require) {
 
   var Iron = require('iron_router');
 
-  Router = new Iron.Router({
-    autoStart: false
-  });
+  /** @global */
+  var Router = new Iron.Router();
 
   Router.configure({
     layoutTemplate: layout
@@ -33,4 +32,8 @@ define(function (require) {
 
   Router.start();
 
+  /*
+   * Important for template helpers to find active Router
+   */
+  window.Router = Router;
 });
