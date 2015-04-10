@@ -15,6 +15,6 @@
   "dependencies": {
     "requirejs": "~2.1.15"{% if(blaze) { %},
     "spacebars": "Torsten85/spacebars"{% if(iron_router) { %},
-    "iron_router": "Torsten85/iron_router"{% } %}{% } %}
+    "iron": "Torsten85/iron_router"{% } %}{% } %}
   }
 }

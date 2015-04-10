@@ -4,10 +4,8 @@ define(function (require) {
   var templateSub = require('spacebars!./sub');
   var layout = require('spacebars!./layout');
 
-  var Iron = require('iron_router');
-
-  /** @global */
-  var Router = new Iron.Router();
+  var Iron = require('iron');
+  var Router = Iron.currentRouter;
 
   Router.configure({
     layoutTemplate: layout
@@ -31,9 +29,4 @@ define(function (require) {
   });
 
   Router.start();
-
-  /*
-   * Important for template helpers to find active Router
-   */
-  window.Router = Router;
 });
